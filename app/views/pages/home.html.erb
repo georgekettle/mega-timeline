@@ -1,18 +1,31 @@
 <div data-controller="fullpage"
     data-fullpage-active-classes-value="<%= ['bg-white/100'].to_json %>"
     data-fullpage-inactive-classes-value="<%= ['bg-white/50'].to_json %>"
-    class="snap-y snap-mandatory transition-all duration-500 ease-out h-screen w-screen overflow-y-scroll" data-action="scroll->fullpage#scroll">
-  <section data-fullpage-target="section" class="snap-always snap-center w-screen h-screen bg-primary-50">Section 1</section>
-  <section data-fullpage-target="section" class="snap-always snap-center w-screen h-screen bg-primary-200">Section 2</section>
-  <section data-fullpage-target="section" class="snap-always snap-center w-screen h-screen bg-primary-400">Section 3</section>
-  <section data-fullpage-target="section" class="snap-always snap-center w-screen h-screen bg-primary-600">Section 4</section>
+    class="snap-y snap-mandatory transition-all duration-500 ease-out h-screen w-screen overflow-y-scroll"
+    data-action="scroll->fullpage#scroll">
+  <section data-fullpage-target="section" class="snap-always snap-center w-screen h-screen bg-primary-50 flex items-center">
+    <div class="container mx-auto max-w-4xl py-16 space-y-8">
+      <div class="space-y-1">
+        <h1 class="text-3xl font-semibold leading-tight">Cabins for rent</h1>
+        <p class="opacity-50">Wow these are some cute cabins.</p>
+      </div>
+      <div class="grid gap-8 grid-cols-4">
+        <% 8.times do %>
+          <%= render 'components/card' %>
+        <% end %>
+      </div>
+    </div>
+  </section>
+  <section data-fullpage-target="section" class="snap-always snap-center w-screen h-screen bg-primary-200 flex items-center justify-center text-center text-3xl font-semibold">Section 2</section>
+  <section data-fullpage-target="section" class="snap-always snap-center w-screen h-screen bg-primary-400 flex items-center justify-center text-center text-3xl font-semibold">Section 3</section>
+  <section data-fullpage-target="section" class="snap-always snap-center w-screen h-screen bg-primary-600 flex items-center justify-center text-center text-3xl font-semibold">Section 4</section>
   
   <div class="fixed left-10 top-1/2 transform -translate-y-1/2">
     <div class="bg-black p-1 rounded-full space-y-1">
-      <div data-fullpage-target="indicator" class="rounded-full w-3 h-3 transition-all duration-150 ease-in-out"></div>
-      <div data-fullpage-target="indicator" class="rounded-full w-3 h-3 transition-all duration-150 ease-in-out"></div>
-      <div data-fullpage-target="indicator" class="rounded-full w-3 h-3 transition-all duration-150 ease-in-out"></div>
-      <div data-fullpage-target="indicator" class="rounded-full w-3 h-3 transition-all duration-150 ease-in-out"></div>
+      <%= render 'components/indicator', name: "First section", index: 0 %>
+      <%= render 'components/indicator', name: "Second section", index: 1 %>
+      <%= render 'components/indicator', name: "Third section", index: 2 %>
+      <%= render 'components/indicator', name: "Fourth section", index: 3 %>
     </div>
   </div>
 </div>

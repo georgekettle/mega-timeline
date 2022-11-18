@@ -1,0 +1,43 @@
+<div class="relative">
+  <div data-controller="fullpage"
+      data-fullpage-active-classes-value="<%= ['bg-white/100'].to_json %>"
+      data-fullpage-inactive-classes-value="<%= ['bg-white/50'].to_json %>"
+      class="snap-y snap-mandatory transition-all duration-500 ease-out h-56 w-56 overflow-y-scroll"
+      data-action="scroll->fullpage#scroll">
+    <section data-fullpage-target="section" class="snap-always snap-center w-full h-full bg-primary-50 flex items-center"></section>
+    <section data-fullpage-target="section" class="snap-always snap-center w-full h-full bg-primary-200">Section 2</section>
+    <section data-fullpage-target="section" class="snap-always snap-center w-full h-full bg-primary-400">Section 3</section>
+    <section data-fullpage-target="section" class="snap-always snap-center w-full h-full bg-primary-600">Section 4</section>
+    
+    <div class="absolute left-10 top-1/2 transform -translate-y-1/2">
+      <div class="bg-black p-1 rounded-full space-y-1">
+        <%= render 'components/indicator', name: "First section", index: 0 %>
+        <%= render 'components/indicator', name: "Second section", index: 1 %>
+        <%= render 'components/indicator', name: "Third section", index: 2 %>
+        <%= render 'components/indicator', name: "Fourth section", index: 3 %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="relative">
+  <div data-controller="fullpage"
+      data-fullpage-active-classes-value="<%= ['bg-white/100'].to_json %>"
+      data-fullpage-inactive-classes-value="<%= ['bg-white/50'].to_json %>"
+      class="snap-y snap-mandatory transition-all duration-500 ease-out h-56 w-56 overflow-y-scroll"
+      data-action="scroll->fullpage#scroll">
+    <section data-fullpage-target="section" class="snap-always snap-center w-full h-full bg-primary-50 flex items-center"></section>
+    <section data-fullpage-target="section" class="snap-always snap-center w-full h-full bg-primary-200">Section 2</section>
+    <section data-fullpage-target="section" class="snap-always snap-center w-full h-full bg-primary-400">Section 3</section>
+    <section data-fullpage-target="section" class="snap-always snap-center w-full h-full bg-primary-600">Section 4</section>
+    
+    <div class="absolute left-10 top-1/2 transform -translate-y-1/2">
+      <div class="bg-black p-1 rounded-full space-y-1">
+        <%= render 'components/indicator', name: "First section", index: 0 %>
+        <%= render 'components/indicator', name: "Second section", index: 1 %>
+        <%= render 'components/indicator', name: "Third section", index: 2 %>
+        <%= render 'components/indicator', name: "Fourth section", index: 3 %>
+      </div>
+    </div>
+  </div>
+</div>
