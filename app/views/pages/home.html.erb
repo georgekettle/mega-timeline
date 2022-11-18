@@ -1,0 +1,18 @@
+<div data-controller="fullpage"
+    data-fullpage-active-classes-value="<%= ['bg-white/100'].to_json %>"
+    data-fullpage-inactive-classes-value="<%= ['bg-white/50'].to_json %>"
+    class="snap-y snap-mandatory transition-all duration-500 ease-out h-screen w-screen overflow-y-scroll" data-action="scroll->fullpage#scroll">
+  <section data-fullpage-target="section" class="snap-always snap-center w-screen h-screen bg-primary-50">Section 1</section>
+  <section data-fullpage-target="section" class="snap-always snap-center w-screen h-screen bg-primary-200">Section 2</section>
+  <section data-fullpage-target="section" class="snap-always snap-center w-screen h-screen bg-primary-400">Section 3</section>
+  <section data-fullpage-target="section" class="snap-always snap-center w-screen h-screen bg-primary-600">Section 4</section>
+  
+  <div class="fixed left-10 top-1/2 transform -translate-y-1/2">
+    <div class="bg-black p-1 rounded-full space-y-1">
+      <div data-fullpage-target="indicator" class="rounded-full w-3 h-3 transition-all duration-150 ease-in-out"></div>
+      <div data-fullpage-target="indicator" class="rounded-full w-3 h-3 transition-all duration-150 ease-in-out"></div>
+      <div data-fullpage-target="indicator" class="rounded-full w-3 h-3 transition-all duration-150 ease-in-out"></div>
+      <div data-fullpage-target="indicator" class="rounded-full w-3 h-3 transition-all duration-150 ease-in-out"></div>
+    </div>
+  </div>
+</div>
